@@ -1,0 +1,46 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
+		meta(name="viewport",content="width=device-width, initial-scale=1.0")
+		block title
+		link(rel="shortcut icon",href="/favicon.ico")
+		link(rel="canonical",href="http://www.jQuerg.com")
+		//- link(rel="stylesheet",type="text/css",href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic")
+		//- link(rel="stylesheet",type="text/css",href="http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here")
+		link(rel="stylesheet",type="text/css",href="#{config.cdn}css/bootstrap.min.css")
+		link(rel="stylesheet",type="text/css",href="#{config.cdn}css/bootstrap-responsive.min.css")
+		link(rel="stylesheet",type="text/css",href="#{config.cdn}css/flat-ui.css") 
+		link(rel="stylesheet",type="text/css",href="#{config.cdn}fonts/typicons/font/typicons.min.css") 
+		//- link(rel="stylesheet",type="text/css",href="#{config.cdn}/css/animate.css") 
+		link(rel="stylesheet",type="text/css",href="#{config.cdn}css/main.css")
+		block css
+		script(src="/js/vendor/modernizr-2.6.2.min.js")
+		//if lte IE7
+			style .support-note .note-ie{display:block;}
+	body 
+		//- header(id="header").header
+			div.container.clearfix
+				div.logo
+					a(href="/") 
+						img(src="/img/logo_text.png",width="120",height="60")
+				div.header_nav
+					button.phonenav
+					ul#nav.menu_nav.clearfix
+						li
+							a 功能按钮
+		block content_here
+		//- footer.footer(id="footer")
+			div.container 
+				div.row.copyright
+					| © 2013 GICCOO LTD | ALL RIGHTS RESERVED
+					img.footlogo(src="/img/logo-w.png",alt="Giccoo")
+
+		script(src="#{config.cdn}js/vendor/jquery-1.10.1.min.js")
+		script(src="#{config.cdn}js/vendor/bootstrap.min.js")
+		script(src="#{config.cdn}js/vendor/jquery.pjax.js")
+		//- script(src="#{config.cdn}/js/plugins.js")
+		//- script(src="#{config.cdn}/js/main.js") 
+		block scripts 
+		block script

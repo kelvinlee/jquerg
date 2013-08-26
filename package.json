@@ -1,0 +1,14 @@
+{
+  "name": "Giccoo",
+  "description": "This is my company website.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "*",
+    "mongoose":"*",
+    "connect":"*",
+    "socket.io":"*",
+    "xss":"*",
+    "jade": "*"
+  }
+}

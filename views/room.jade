@@ -1,0 +1,30 @@
+extends layout 
+block content_here
+	section.editorpage.container
+		div.row
+			div#editorlist.span6.editorlist
+				pre#main.editor
+					| var jQuerG = "welcome here, hope you like.";
+				div.editor_ctrl.clearfix
+					div.box
+						a.boxname 
+							span(name="editorname",for="main") main
+							| / 
+							span(name="editortype",for="main") javascript
+						a(for="main",href="javascript:void(0)").typcn.typcn-cog-outline
+						a(for="main",href="javascript:void(0)").typcn.typcn-heart
+						a(for="main",href="javascript:void(0)").typcn.typcn-arrow-maximise
+						a(for="main",href="javascript:void(0)").hide.typcn.typcn-arrow-minimise
+						//- a.fui-cross 
+			div#ctrl.span6.userctrl.hide
+				input(name="filename",type="text",placeholder="请输出文件名").span6
+				select.select-block(name="modelist")
+					each val, index in modetypelist
+						option(value="#{val}") #{index}
+				input(name="create",type="button",value="创建新文件").btn.btn-small.btn-primary
+
+block scripts
+	script(src="/socket.io/socket.io.js")
+	script(src="/js/vendor/src-min-noconflict/ace.js")
+	script(src="/js/vendor/bootstrap-select.js")
+	script(src="/js/main.js")
