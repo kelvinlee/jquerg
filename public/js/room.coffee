@@ -28,7 +28,7 @@ editor.setTheme "ace/theme/twilight"
 editor.getSession().setMode path+"javascript" 
 
 # www.jquerg.com
-socket = io.connect 'http://www.jquerg.com' 
+socket = io.connect 'http://www.jquerg.com:8888'
 socket.on 'online list', (data)->
 	$("#n_p").text data.length
 socket.emit 'login', data:'first'

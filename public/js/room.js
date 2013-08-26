@@ -36,7 +36,7 @@ editor.setTheme("ace/theme/twilight");
 
 editor.getSession().setMode(path + "javascript");
 
-socket = io.connect('http://www.jquerg.com');
+socket = io.connect('http://www.jquerg.com:8888');
 
 socket.on('online list', function(data) {
   return $("#n_p").text(data.length);
