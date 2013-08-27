@@ -3,7 +3,11 @@ exports.config = {
   name: 'jQuerg',
   description: 'jQuerg',
   version: '0.1.0',
-
+  // for socket
+  serverIp : '199.231.227.35',
+  clienturl: 'http://www.jquerg.com:8888',
+  // serverIp : '127.0.0.1',
+  // clienturl: 'http://localhost:8888',
   // site settings
   site_headers: [
     '<meta name="author" content="Kelvin" />', 

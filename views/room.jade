@@ -22,9 +22,13 @@ block content_here
 					each val, index in modetypelist
 						option(value="#{val}") #{index}
 				input(name="create",type="button",value="创建新文件").btn.btn-small.btn-primary
-
+		div#config.hide
+			input(name="clienturl",val="#{config.clienturl}",type="hidden")
 block scripts
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js")
+	//- script(src="/socket.io/socket.io.js")
 	script(src="/js/vendor/src-min-noconflict/ace.js")
 	script(src="/js/vendor/bootstrap-select.js")
 	script(src="/js/room.js")
+	:coffee
+		connect_socket $('#clienturl').val()
