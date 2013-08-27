@@ -31,4 +31,4 @@ block scripts
 	script(src="/js/vendor/bootstrap-select.js")
 	script(src="/js/room.js")
 	:coffee
-		connect_socket $('#clienturl').val()
+		connect_socket $('input[name=clienturl]').val()
