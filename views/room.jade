@@ -23,7 +23,7 @@ block content_here
 						option(value="#{val}") #{index}
 				input(name="create",type="button",value="创建新文件").btn.btn-small.btn-primary
 		div#config.hide
-			input(name="clienturl",val="#{config.clienturl}",type="hidden")
+			input(name="clienturl",value="#{config.clienturl}",type="hidden")
 block scripts
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js")
 	//- script(src="/socket.io/socket.io.js")
