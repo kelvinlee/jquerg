@@ -1,4 +1,5 @@
 // main.less
+@import "loading";
 body,html {
 	.wh(100%,100%);
 } 
@@ -29,6 +30,14 @@ a {
 	.wh(auto,150px);
 	.mp0(0px,0px);
 	border-bottom-right-radius:0px;
+}
+.loading {
+	position: fixed;
+	.tl;
+	.wh(100%,100%);
+	z-index: 2000;
+	// background: #ffffff url('../img/ajax-loader-trans.gif') no-repeat center center;
+
 }
 .editorpage { 
 	height: 100%;
@@ -80,7 +89,12 @@ a {
 				color: #f2f2f2;
 				.mp0(0px,0px 5px);
 			}
+		} 
+	}
+	.notification {
+		video {
+			width: 200px;
+			height: 150px;
 		}
-		
 	}
 }

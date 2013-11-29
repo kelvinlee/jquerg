@@ -76,13 +76,28 @@ io.sockets.on 'connection', (socket)->
 		refresh_online()
 		default_info()
 	socket.on 'message', (data)->
+		console.log 'message: '+data
+		socket.broadcast.emit('message', data);
 
 	socket.on 'create default info', (data)->
-		io.sockets.socket(data.who).emit 'create default info',content:data.content
+		io.sockets.socket(data.who).emit 'create default info',
+			content:data.content
+			list:data.list
 
 	socket.on 'editor', (data)->
 		socket.broadcast.to(roomname).emit 'editor', data
 	
+	socket.on 'create editor', (data)->
+		socket.broadcast.to(roomname).emit 'create editor', data
+
+	socket.on 'destroy editor', (data)->
+		socket.broadcast.to(roomname).emit 'destroy editor', data
+		
+	# video
+	socket.on 'chat', (data)->
+		console.log 'chat: ',data
+		socket.broadcast.to(roomname).emit 'chat', data
+
 	socket.on 'disconnect', ->
 		setTimeout ->
 			refresh_online()

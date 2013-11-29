@@ -1,0 +1,407 @@
+@c-1:#75cae3;
+@c-2:#28a7e1;
+@c-3:#0d6fb8;
+@c-4:#144894;
+.logobox {
+    width: 340px;
+    height: 220px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin:-110px 0px 0px -170px;
+}
+@d:28px;
+@gw:20px;
+@gh:20px;
+@w:230px;
+@h:220px;
+@l1:@w/2-@gw/2;
+@t1:@h/2-@gh/2;
+@l2:@w/2-@gw/2+@d;
+@t2:@h/2-@gh/2-@d;
+@l3:@w/2-@gw/2+@d;
+@t3:@h/2-@gh/2+@d;
+@l4:@w/2-@gw/2+@d*2;
+@t4:@h/2-@gh/2-@d*2;
+@l5:@w/2-@gw/2+@d*2;
+@t5:@h/2-@gh/2;
+@l6:@w/2-@gw/2+@d*2;
+@t6:@h/2-@gh/2+@d*2; 
+@l7:@w/2-@gw/2+@d*3;
+@t7:@h/2-@gh/2-@d;
+@l8:@w/2-@gw/2+@d*3;
+@t8:@h/2-@gh/2+@d;
+@l9:@w/2-@gw/2+@d*4;
+@t9:@h/2-@gh/2;
+.gic1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left:(340px/2-50px/2);
+    top:(220px/2-50px/2);
+    // width: @gw;
+    // height: @gh;
+    // left:@l1;
+    // top:@t1;
+    background: @c-1; 
+    // .deg;
+}
+.gic2 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l2;
+    top:@t2;
+    background: @c-2; 
+    .deg;
+    opacity: 0;
+}
+.gic3 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l3;
+    top:@t3;
+    background: @c-2; 
+    .deg;
+    opacity: 0;
+}
+.gic4 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l4;
+    top:@t4;
+    background: @c-3; 
+    .deg;
+    opacity: 0;
+}
+.gic5 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l5;
+    top:@t5;
+    background: @c-3; 
+    .deg;
+    opacity: 0;
+}
+.gic6 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l6;
+    top:@t6;
+    background: @c-3; 
+    .deg;
+    opacity: 0;
+}
+.gic7 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l7;
+    top:@t7;
+    background: @c-3; 
+    .deg;
+    opacity: 0;
+}
+.gic8 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l8;
+    top:@t8;
+    background: @c-3; 
+    .deg;
+    opacity: 0;
+}
+.gic9 {
+    width: @gw;
+    height: @gh;
+    position: absolute;
+    left:@l9;
+    top:@t9;
+    background: @c-4; 
+    .deg;
+    opacity: 0;
+}
+.gic10 {
+    position: absolute;
+    left:@l3;
+    top:@t3; 
+    width: @gw;
+    height: @gh;
+    z-index: 1;
+    .deg(-45deg);
+    background: @c-4;
+    opacity: 0;
+}
+.gic11 {
+    width: @gw;
+    height: 80px;
+    position: absolute;
+    left:(@l9 - 21px);
+    top:(@t9 - 9px);
+    background: @c-4; 
+    opacity: 0;
+    .deg;
+}
+.gicname {
+    font-family: Arial;
+    font-size: 32px;
+    color: @c-4;
+    text-align: center;
+    letter-spacing: -4px;
+    position: absolute;
+    top:(@h - 60px);
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+}
+// public
+.deg(@d:45deg) {
+    -webkit-transform: rotate(@d);
+    -moz-transform: rotate(@d);
+    -ms-transform: rotate(@d);
+    -o-transform: rotate(@d);
+    transform: rotate(@d);
+}
+.trf(@m) {
+    -webkit-transform: @m;
+    -moz-transform: @m;
+    -ms-transform: @m;
+    -o-transform: @m;
+    transform: @m;
+}
+.mg1 {
+    0% {
+        opacity: 0;
+        .deg(0deg);
+    }
+    10% {
+        .deg(360deg);
+    }
+    20% {
+        .deg(720deg);
+    } 
+    30% {
+        .deg(1080deg);
+    }
+    40% {
+        .deg(1440deg);
+    }
+    50% {
+        .deg(1800deg);
+    }
+    60% {
+        width: 50px;
+        height: 50px;
+        left:(340px/2-50px/2);
+        top:(220px/2-50px/2);
+    }
+    100% { 
+        width: @gw;
+        height: @gh;
+        left:@l1;
+        top:@t1;
+        .deg(2205deg);
+    }
+}
+.mg2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.mg3 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        left:(@l3 + 14px);
+        top:(@t3 - 6px); 
+        width: @gw;
+        height: 60px; 
+    }
+} 
+.mg4 {
+    0% {
+        opacity: 0; 
+        letter-spacing: -4px;
+    }
+    15% {
+        opacity: 1;
+    }
+    30% {
+        top: (@h - 22px);
+    }
+    40% {
+        top: (@h - 32px );
+    }
+    50% {
+        top: (@h - 28px);
+    }
+    55% {
+        top: (@h - 32px);
+        letter-spacing: -4px;
+    }
+    65% {
+        letter-spacing: 0px;
+    }
+    70% {
+        letter-spacing: 4px;
+    }
+    90% {
+        letter-spacing: 0px;
+    }
+    100% {
+        top: (@h - 32px);
+        opacity: 1; 
+        letter-spacing: 0px;
+    }
+} 
+@-webkit-keyframes mgicf {
+    .mg1;
+}
+@-moz-keyframes mgicf {
+    .mg1;
+}
+@-ms-keyframes mgicf {
+    .mg1;
+}
+@-o-keyframes mgicf {
+    .mg1;
+}
+@keyframes mgicf {
+    .mg1;
+}
+@-webkit-keyframes mgics {
+    .mg2;
+}
+@-moz-keyframes mgics {
+    .mg2;
+}
+@-ms-keyframes mgics {
+    .mg2;
+}
+@-o-keyframes mgics {
+    .mg2;
+}
+@keyframes mgics {
+    .mg2;
+}
+@-webkit-keyframes mgicld {
+    .mg3;
+}
+@-moz-keyframes mgicld {
+    .mg3;
+}
+@-ms-keyframes mgicld {
+    .mg3;
+}
+@-o-keyframes mgicld {
+    .mg3;
+}
+@keyframes mgicld {
+    .mg3;
+}
+@-webkit-keyframes mgicrd {
+    .mg2;
+}
+@-moz-keyframes mgicrd {
+    .mg2;
+}
+@-ms-keyframes mgicrd {
+    .mg2;
+}
+@-o-keyframes mgicrd {
+    .mg2;
+}
+@keyframes mgicrd {
+    .mg2;
+}
+@-webkit-keyframes mgicn {
+    .mg4;
+}
+@-moz-keyframes mgicn {
+    .mg4;
+}
+@-ms-keyframes mgicn {
+    .mg4;
+}
+@-o-keyframes mgicn {
+    .mg4;
+}
+@keyframes mgicn {
+    .mg4;
+}
+
+.mgicf {
+    .anin(mgicf,1s);
+}
+.mgics {
+    .anin(mgics,1s);
+}
+.mgicld {
+    .anin(mgicld,.3s);
+}
+.mgicrd {
+    .anin(mgicrd,.5s);
+}
+.migcn {
+    .anin(mgicn,1.5s);
+}
+
+.anin(@n,@s:2s) {
+    -webkit-animation-name: @n;
+    -moz-animation-name: @n;
+    -o-animation-name: @n;
+    animation-name: @n;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: @s;
+    -moz-animation-duration: @s;
+    -ms-animation-duration: @s;
+    -o-animation-duration: @s;
+    animation-duration: @s;  
+}
+.dl(@s:.5s) {
+    -webkit-animation-delay: @s;
+    -moz-animation-delay: @s;
+    -o-animation-delay: @s;
+    animation-delay: @s;
+}
+.a {
+    .dl;
+}
+.b {
+    .dl(1s);
+}
+.c{
+    .dl(1.5s);
+}
+.d{
+    .dl(2s);
+}
+.e {
+    .dl(2.5s);
+}
+.f {
+   .dl(3s); 
+}
+.g {
+   .dl(3.5s); 
+}
+.h {
+    .dl(4s);
+}

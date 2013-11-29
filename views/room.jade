@@ -1,34 +1,66 @@
 extends layout 
 block content_here
+	div#loading.loading
+		div.logobox
+			div.gic1.mgicf
+			div.gic2.b.mgics
+			div.gic3.b.mgics
+			div.gic4.c.mgics
+			div.gic5.c.mgics
+			div.gic6.c.mgics
+			div.gic7.d.mgics
+			div.gic8.d.mgics
+			div.gic9.e.mgics
+			div.gic10.f.mgicld
+			div.gic11.g.mgicrd 
+			div.gicname.h.migcn Giccoo
+
 	section.editorpage.container
 		div.row
 			div#editorlist.span6.editorlist
 				pre#main.editor
 					| var jQuerG = "welcome here, hope you like.";
+					| // you can try ctrl+enter or mac use command+enter
+					| alert(jQuerG);
 				div.editor_ctrl.clearfix
 					div.box
 						a.boxname 
 							span(name="editorname",for="main") main
 							| / 
 							span(name="editortype",for="main") javascript
+						a(for="main",href="javascript:void(0)").typcn.typcn-media-play-outline
 						a(for="main",href="javascript:void(0)").typcn.typcn-cog-outline
 						a(for="main",href="javascript:void(0)").typcn.typcn-heart
 						a(for="main",href="javascript:void(0)").typcn.typcn-arrow-maximise
 						a(for="main",href="javascript:void(0)").hide.typcn.typcn-arrow-minimise
 						//- a.fui-cross 
-			div#ctrl.span6.userctrl.hide
-				input(name="filename",type="text",placeholder="请输出文件名").span6
-				select.select-block(name="modelist")
-					each val, index in modetypelist
-						option(value="#{val}") #{index}
-				input(name="create",type="button",value="创建新文件").btn.btn-small.btn-primary
+					
+			div#ctrl.span6.userctrl
+				div#videolist.notification
+				div.btnlist
+					a.btn.btn-primary.btn-lg(href="#popcreate",data-toggle="modal") launch modal
+				div#popcreate.pop 
+					div.createneweditor
+						input(name="filename",type="text",placeholder="请输出文件名").span6
+						select.select-block(name="modelist")
+							each val, index in modetypelist
+								option(value="#{val}") #{index}
+						input(name="create",type="button",value="创建新文件").btn.btn-small.btn-primary
+						input(name="openvideo",type="button",value="打开视频",onclick="startVideo()").btn.btn-small.btn-primary
+						input(name="connect",type="button",value="连接服务器",onclick="connect()").btn.btn-small.btn-primary		
+			
+
+
 		div#config.hide
 			input(name="clienturl",value="#{config.clienturl}",type="hidden")
 block scripts
-	script(src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js")
-	//- script(src="/socket.io/socket.io.js")
-	script(src="/js/vendor/src-min-noconflict/ace.js")
+	//- script(src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js")
+	script(src="/socket.io/socket.io.js")
+	//- script(src="//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.6.3/coffee-script.min.js")
+	script(src="http://coffeescript.org/extras/coffee-script.js")
+	script(src="/js/vendor/src-min/ace.js")
 	script(src="/js/vendor/bootstrap-select.js")
-	script(src="/js/room.js")
+	script(src="/js/vendor/meeting.js")
+	script(src="/js/room.js") 
 	:coffee
-		connect_socket $('input[name=clienturl]').val()
+		connect_socket '#{config.clienturl}'
