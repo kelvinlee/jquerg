@@ -5,6 +5,7 @@ exports.config = {
   version: '0.1.0',
   // for socket
   serverIp : '127.0.0.1',
+  port: 8002, 
   clienturl: 'http://www.jquerg.com:8002',
   // serverIp : '127.0.0.1',
   // clienturl: 'http://localhost:8888',
@@ -25,7 +26,6 @@ exports.config = {
   db: 'mongodb://localhost/jquerg',
   session_secret: 'giccoo_club',
   auth_cookie_name: 'giccoo_club',
-  port: 8002, 
   list_count: 20,
   // mail SMTP
   mail_opts: {
