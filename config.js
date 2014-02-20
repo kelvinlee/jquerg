@@ -6,7 +6,7 @@ exports.config = {
   // for socket
   serverIp : '127.0.0.1',
   port: 8002, 
-  clienturl: 'http://www.jquerg.com:8002',
+  clienturl: 'http://www.jquerg.com',
   // serverIp : '127.0.0.1',
   // clienturl: 'http://localhost:8888',
   // site settings
