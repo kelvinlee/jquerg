@@ -8,6 +8,7 @@
     "connect":"*",
     "socket.io":"*",
     "xss":"*",
+    "coffee-script":"*",
     "jade": "*"
   }
 }
