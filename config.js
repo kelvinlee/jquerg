@@ -4,7 +4,7 @@ exports.config = {
   description: 'jQuerg',
   version: '0.1.0',
   // for socket
-  serverIp : '209.148.89.194',
+  serverIp : '127.0.0.1',
   clienturl: 'http://www.jquerg.com:8888',
   // serverIp : '127.0.0.1',
   // clienturl: 'http://localhost:8888',

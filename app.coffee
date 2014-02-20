@@ -44,7 +44,7 @@ app.configure 'development',->
 
 routes app
 usersWS = {}
-server.listen 8888,config.serverIp
+server.listen config.port,config.serverIp
 io.set 'authorization', (data, accept)->
 	cookie data, {}, (err)->
 		if !err
