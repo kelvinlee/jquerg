@@ -200,4 +200,5 @@ $ ->
 	createEditor_default()
 	finishedLoad 'bind btn event'
 	
+	connect_socket '#{config.clienturl}'
 
